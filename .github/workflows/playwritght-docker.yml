@@ -1,20 +1,19 @@
 name: Playwright Tests with Docker
-
-  on:
+on:
     push:
       branches: [main]
-    pull-request:
+    pullrequest:
       branches: [main]
 
-  jobs:
+jobs:
     playwright-tests:
       runs-on: ubuntu-latest
       
       steps:
-        - name: Checkout Repository
+        - name: Checkout Github Repository
           uses: actions/checkout@v4
 
-        - name: Build Playwright Docker Image
+        - name: Build Playwright Test Docker Image
           run: docker build -t playwright-tests .
 
         - name: Run Playwright Tests in Docker
