@@ -1,4 +1,5 @@
-export class LoginPage{
+
+ export class LoginPage{
     // Constructor to initialize the page and locators
     constructor(page){
         // Store the page object for later use 
@@ -41,5 +42,5 @@ export class LoginPage{
 
 }
 
-module.exports = { LoginPage };
+module.exports = { LoginPage } ;
 
