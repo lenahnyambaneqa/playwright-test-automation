@@ -11,4 +11,14 @@ test('Home Page Test', async({page}) => {
 
     // validate home page
     await expect(page).toHaveTitle('Your Store');
+
+     //calling search function from HoeOage class
+    await homePage.search('MacBook');
+    
+
+    await  expect(page.getByRole('heading', {name:'Search - MacBook'})).toBeVisible();
+
+   
+
+    
 });
