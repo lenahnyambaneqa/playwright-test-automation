@@ -1,0 +1,17 @@
+apiVersion: batch/v1
+kind: Job
+
+metadata:
+  name: playwright-tests
+
+spec:
+  backoffLimit: 0
+
+  template:
+    spec:
+      restartPolicy: Never
+
+      containers:
+        - name: playwright
+          image: playwright-tests:latest
+          imagePullPolicy: IfNotPresent
