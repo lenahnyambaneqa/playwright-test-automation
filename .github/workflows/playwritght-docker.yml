@@ -2,7 +2,7 @@ name: Playwright Tests with Docker
 on:
     push:
       branches: [main]
-    pullrequest:
+    pull_request:
       branches: [main]
 
 jobs:
