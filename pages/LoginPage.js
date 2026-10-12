@@ -5,10 +5,11 @@
         // Store the page object for later use 
         this.page = page;
         
-        // Define locators for the username input, password input, and login button
+        // Locators for the username input, password input, and login button
         this.usernameInput = page.getByRole('textbox', { name: 'Username' });
         this.passwordInput = page.getByRole('textbox', { name: 'Password' });
-        this.loginButton = page.getByRole('button', { name: 'Login' });     
+        this.loginButton = page.getByRole('button', { name: 'Login' });  
+         
 
     }
 
@@ -40,6 +41,7 @@
         await this.enterPassword(password);
         await this.clickLoginButton();
     }
+
 
 }
 
