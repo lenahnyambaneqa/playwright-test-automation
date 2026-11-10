@@ -15,6 +15,11 @@ test.describe('Login Page Tests', async() =>{
 
   });
 
+  test('Logo image should be visible', async ({page}) => {
+    
+    await expect(page.getByRole('img', { name: 'orangehrm-logo' })).toBeVisible();
+  });
+
   test('Should Login with valid credentials', async ({page}) => {
 
   // Perform login with valid credentials

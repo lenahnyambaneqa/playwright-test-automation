@@ -10,7 +10,7 @@
 
     }
 
-    async goto() {
+    async navigateto() {
 
         await this.page.goto('https://tutorialsninja.com/demo/', 
             {
